@@ -8,7 +8,7 @@ class Tab:
         'chicken':10,
         'beef':15,
         'veggie':12,
-        'dessert':6
+        'desert':6
     }
 
     def __init__ (self):
@@ -18,7 +18,7 @@ class Tab:
 
     def add(self,item):
         self.items.append(item)
-        self.total += self.menu(item)
+        self.total += self.menu[item]
 
 
     def print_bill(self, tax, service):
@@ -27,3 +27,7 @@ class Tab:
         total = self.total + tax + service
 
 
+        for item in self.items:
+            print(f'{item:20} €{self.menu[item]}')
+
+        return f'{"Total:"} €{total:.2f}'
