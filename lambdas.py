@@ -1,15 +1,39 @@
 # lambdas
+
+
+# A lambda function is a small anonymous function.
+# A lambda function can take any number of arguments, 
+# but can only have one expression.
+
+x = lambda a : a + 10
+print(x(5))
+# 15
+
+x = lambda a, b : a * b
+print(x(5, 6))
+# 30
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+# 13
+
+
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11))
+print(mytripler(11))
+
+
+
 # a bit like an anonymous function
 # it doesnt need a name
 # if we only going to use a function once
 # there is no need to name it
-# so we can just use lambda
-# say like when we map a list or filter a list
 
-# A lambda function is a small anonymous function.
-
-# A lambda function can take any number of arguments, 
-# but can only have one expression.
 
 nums = [1,2,3,4,5,6,7]
 
